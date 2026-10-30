@@ -1126,6 +1126,19 @@ exports.sendInterest = async (req, res) => {
       return res.status(400).json({ status: 'error', message: 'You cannot send interest to yourself.' });
     }
 
+    const caller = await User.findOne({ phone: callerPhone });
+    if (!caller) {
+      return res.status(404).json({ status: 'error', message: 'User not found.' });
+    }
+
+    const callerPhotos = (caller.photos || []).concat(caller.uploadedPhotos || []).filter(p => p && typeof p === 'string' && p.trim().length > 0 && p !== 'null');
+    if (callerPhotos.length < 1) {
+      return res.status(403).json({
+        status: 'photo_required',
+        message: 'You must upload at least 1 photo to your profile before sending likes or interest.'
+      });
+    }
+
     if (!dbService.ready || mongoose.connection.readyState !== 1) {
       return res.status(200).json({
         status: 'success',
