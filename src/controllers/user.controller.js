@@ -1709,14 +1709,75 @@ exports.sendChatMessage = async (req, res) => {
       isHidden = true;
     }
 
+    const Conversation = require('../models/conversation.model');
+    let conversation = await Conversation.findOne({
+      participants: { $all: [caller._id, targetUserId] }
+    });
+    if (!conversation) {
+      conversation = new Conversation({
+        participants: [caller._id, targetUserId],
+        lastMessage: maskedText
+      });
+      await conversation.save();
+    } else {
+      conversation.lastMessage = maskedText;
+      await conversation.save();
+    }
+
     const message = new Message({
+      conversationId: conversation._id,
+      senderId: caller._id,
+      receiverId: targetUserId,
       sender: caller._id,
       receiver: targetUserId,
       text: maskedText,
       isHidden: isHidden,
-      status: 'sent'
+      status: 'sent',
+      isRead: false
     });
     await message.save();
+
+    // Broadcast in real-time through Socket.io
+    try {
+      const socketService = require('../services/socket.service');
+      const io = socketService.getIo();
+      if (io) {
+        const messagePayload = {
+          _id: message._id.toString(),
+          id: message._id.toString(),
+          conversationId: conversation._id.toString(),
+          sender: caller._id.toString(),
+          senderId: caller._id.toString(),
+          receiver: targetUserId.toString(),
+          receiverId: targetUserId.toString(),
+          text: maskedText,
+          status: 'sent',
+          createdAt: message.createdAt
+        };
+
+        io.to(`user_${targetUserId}`).emit('receiveMessage', messagePayload);
+        const onlineUsers = socketService.getOnlineUsers();
+        const receiverSocketId = onlineUsers ? onlineUsers.get(targetUserId.toString()) : null;
+        if (receiverSocketId) {
+          io.to(receiverSocketId).emit('receiveMessage', messagePayload);
+        }
+
+        io.to(`user_${caller._id.toString()}`).emit('messageSent', messagePayload);
+
+        io.to(`user_${targetUserId}`).emit('conversationUpdate', {
+          otherUserId: caller._id.toString(),
+          lastMessage: maskedText,
+          updatedAt: message.createdAt
+        });
+        io.to(`user_${caller._id.toString()}`).emit('conversationUpdate', {
+          otherUserId: targetUserId.toString(),
+          lastMessage: maskedText,
+          updatedAt: message.createdAt
+        });
+      }
+    } catch (sErr) {
+      console.warn('[Socket Broadcast Warning]:', sErr.message);
+    }
 
     if (targetUserObj && targetUserObj.fcmToken) {
       await fcmService.sendPushNotification(
@@ -1897,17 +1958,21 @@ exports.getConversations = async (req, res) => {
     const messages = await Message.find({
       $or: [
         { sender: caller._id },
-        { receiver: caller._id }
+        { receiver: caller._id },
+        { senderId: caller._id },
+        { receiverId: caller._id }
       ]
     }).lean();
 
     const userIds = new Set();
     messages.forEach(m => {
-      if (m.sender.toString() !== caller._id.toString()) {
-        userIds.add(m.sender.toString());
+      const sId = (m.senderId || m.sender || '').toString();
+      const rId = (m.receiverId || m.receiver || '').toString();
+      if (sId && sId !== caller._id.toString()) {
+        userIds.add(sId);
       }
-      if (m.receiver.toString() !== caller._id.toString()) {
-        userIds.add(m.receiver.toString());
+      if (rId && rId !== caller._id.toString()) {
+        userIds.add(rId);
       }
     });
 

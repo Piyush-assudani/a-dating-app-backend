@@ -107,18 +107,42 @@ exports.init = async (httpServer) => {
 
         await newMessage.save();
 
-        // Emit message to receiver if they are online (works across instances via Redis adapter)
+        const messagePayload = {
+          _id: newMessage._id.toString(),
+          id: newMessage._id.toString(),
+          conversationId: conversation._id.toString(),
+          sender: senderId.toString(),
+          senderId: senderId.toString(),
+          receiver: receiverId.toString(),
+          receiverId: receiverId.toString(),
+          text,
+          status: 'sent',
+          createdAt: newMessage.createdAt
+        };
+
+        // Emit message to receiver's room and individual socket
+        io.to(`user_${receiverId}`).emit('receiveMessage', messagePayload);
         const receiverSocketId = onlineUsers.get(receiverId);
-        
         if (receiverSocketId) {
-          io.to(receiverSocketId).emit('receiveMessage', newMessage);
-          
+          io.to(receiverSocketId).emit('receiveMessage', messagePayload);
           newMessage.status = 'delivered';
           await newMessage.save();
         }
-        
+
         // Acknowledge back to sender
-        socket.emit('messageSent', { ...newMessage.toJSON(), localId: payload.id });
+        socket.emit('messageSent', { ...messagePayload, localId: payload.id });
+
+        // Emit real-time conversation updates for tab views
+        io.to(`user_${receiverId}`).emit('conversationUpdate', {
+          otherUserId: senderId.toString(),
+          lastMessage: text,
+          updatedAt: newMessage.createdAt
+        });
+        io.to(`user_${senderId}`).emit('conversationUpdate', {
+          otherUserId: receiverId.toString(),
+          lastMessage: text,
+          updatedAt: newMessage.createdAt
+        });
 
       } catch (error) {
         console.error('Socket sendMessage Error:', error);
