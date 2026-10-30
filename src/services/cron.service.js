@@ -48,7 +48,8 @@ class CronService {
       if (dbService.ready) {
         users = await User.find({ fcmToken: { $exists: true, $ne: '' } }).lean();
       } else {
-        users = cacheService.get('active_users') || [];
+        const cached = cacheService.get('active_users');
+        users = Array.isArray(cached) ? cached : [];
       }
 
       const now = new Date();
