@@ -1,0 +1,842 @@
+[
+  {
+    "day": 1,
+    "slot": "morning",
+    "title": "Good morning, {name} ☕",
+    "body": "Someone in {city} just woke up thinking about a coffee date. Check your daily sparks!",
+    "type": "match"
+  },
+  {
+    "day": 1,
+    "slot": "afternoon",
+    "title": "Chai break pe akele? 👀",
+    "body": "Your profile just got {views} views in {city}. Someone is definitely checking out your vibe.",
+    "type": "view"
+  },
+  {
+    "day": 1,
+    "slot": "night",
+    "title": "Netflix alone again, {name}? 🍿",
+    "body": "{matches} attractive singles in {city} are active right now. Say hi before they sleep!",
+    "type": "chat"
+  },
+  {
+    "day": 2,
+    "slot": "morning",
+    "title": "Bro, your phone is buzzing 🔥",
+    "body": "A verified match just double-tapped your smile. Tap to see who fell for it!",
+    "type": "interest"
+  },
+  {
+    "day": 2,
+    "slot": "afternoon",
+    "title": "Alert: Profile heat rising 🌶️",
+    "body": "You're in the top 5% viewed profiles in {city} today. Don't play too hard to get!",
+    "type": "boost"
+  },
+  {
+    "day": 2,
+    "slot": "night",
+    "title": "Late night conversations? 🌙",
+    "body": "Midnight banter hits different. Your top match is online right now.",
+    "type": "chat"
+  },
+  {
+    "day": 3,
+    "slot": "morning",
+    "title": "Uff, look at your feed today 😍",
+    "body": "We found someone in {city} who shares your exact music and travel vibe. Go look!",
+    "type": "match"
+  },
+  {
+    "day": 3,
+    "slot": "afternoon",
+    "title": "Quick advice, {name} 📸",
+    "body": "Profiles with 3+ photos get 4x more first messages. Show off that million dollar smile!",
+    "type": "tips"
+  },
+  {
+    "day": 3,
+    "slot": "night",
+    "title": "Someone’s blushing because of you 🙈",
+    "body": "A match in {city} just re-read your signature prompt. Don't leave them on read!",
+    "type": "interest"
+  },
+  {
+    "day": 4,
+    "slot": "morning",
+    "title": "First question: Coffee or Cocktails? 🍸",
+    "body": "Your daily spark poll is live. See what singles in {city} voted for!",
+    "type": "poll"
+  },
+  {
+    "day": 4,
+    "slot": "afternoon",
+    "title": "Wait... is that a spark? ⚡",
+    "body": "{crush_name} from {city} just lingered on your profile for over 2 minutes.",
+    "type": "view"
+  },
+  {
+    "day": 4,
+    "slot": "night",
+    "title": "10:30 PM vibe check ✨",
+    "body": "Why stare at ceiling fan when you could be having a cute banter on Knot? Open up!",
+    "type": "chat"
+  },
+  {
+    "day": 5,
+    "slot": "morning",
+    "title": "Did you sneeze, {name}? 🤧",
+    "body": "Because someone in {city} was definitely thinking about you this morning. Open your picks!",
+    "type": "match"
+  },
+  {
+    "day": 5,
+    "slot": "afternoon",
+    "title": "Someone just saved your prompt 💬",
+    "body": "They loved your answer. Break the ice with a cheeky voice note or wave!",
+    "type": "interest"
+  },
+  {
+    "day": 5,
+    "slot": "night",
+    "title": "Plans for this weekend? 🍕",
+    "body": "3 singles nearby are looking for dinner & drinks dates this Friday. Ask them out!",
+    "type": "match"
+  },
+  {
+    "day": 6,
+    "slot": "morning",
+    "title": "Rise and shine, good lookin' ✨",
+    "body": "Your morning batch of curated high-intent singles in {city} just arrived.",
+    "type": "match"
+  },
+  {
+    "day": 6,
+    "slot": "afternoon",
+    "title": "Your profile is getting attention 👀",
+    "body": "{views} new people unlocked your bio today. Who says romance is dead?",
+    "type": "view"
+  },
+  {
+    "day": 6,
+    "slot": "night",
+    "title": "Candlelight vibes in {city} 🕯️",
+    "body": "Someone matching your exact relationship intent is waiting for a reply.",
+    "type": "chat"
+  },
+  {
+    "day": 7,
+    "slot": "morning",
+    "title": "Sunday brunch date, anyone? 🥐",
+    "body": "Find someone to split pancakes with this Sunday. Tap to browse verified members.",
+    "type": "match"
+  },
+  {
+    "day": 7,
+    "slot": "afternoon",
+    "title": "One-week Knot Milestone! 🥂",
+    "body": "You're on a roll, {name}! Your profile score is up by 42%. Keep the sparks flying.",
+    "type": "boost"
+  },
+  {
+    "day": 7,
+    "slot": "night",
+    "title": "Secret Admirer Alert 🕵️‍♂️",
+    "body": "Someone in {city} secretly liked your first picture. Tap to reveal their vibe!",
+    "type": "interest"
+  },
+  {
+    "day": 8,
+    "slot": "morning",
+    "title": "Don't let them wonder... 💭",
+    "body": "Your match checked your profile twice. Send that first text before someone else does!",
+    "type": "chat"
+  },
+  {
+    "day": 8,
+    "slot": "afternoon",
+    "title": "Chai sutta or Rooftop cafe? ☕",
+    "body": "Vote in today's local dilemma & see which matches share your weekend vibe.",
+    "type": "poll"
+  },
+  {
+    "day": 8,
+    "slot": "night",
+    "title": "Sleepy? Or just waiting for a text? 📱",
+    "body": "Your inbox has an unread spark. Don't go to bed with curiosity!",
+    "type": "chat"
+  },
+  {
+    "day": 9,
+    "slot": "morning",
+    "title": "Good morning to you & your good taste 😉",
+    "body": "Today's daily picks are handpicked for your exact lifestyle. Take a peek!",
+    "type": "match"
+  },
+  {
+    "day": 9,
+    "slot": "afternoon",
+    "title": "Kaafi charming lag rahe ho aaj ✨",
+    "body": "{views} people stopped scrolling on your profile today. The algorithm loves you!",
+    "type": "view"
+  },
+  {
+    "day": 9,
+    "slot": "night",
+    "title": "Long walk & music playlist? 🎧",
+    "body": "{crush_name} in {city} has similar Spotify vibes. Start the jam session!",
+    "type": "interest"
+  },
+  {
+    "day": 10,
+    "slot": "morning",
+    "title": "A match made in heaven? (Or on Knot) 💘",
+    "body": "New profile alert: 94% compatibility match just joined from {city}.",
+    "type": "match"
+  },
+  {
+    "day": 10,
+    "slot": "afternoon",
+    "title": "Dating Tip: Ask this question 💡",
+    "body": "'What’s the most spontaneous thing you've ever done?' works like magic. Try it!",
+    "type": "tips"
+  },
+  {
+    "day": 10,
+    "slot": "night",
+    "title": "Who's keeping you awake, {name}? 😏",
+    "body": "Your top match is typing... just kidding, but they're online right now!",
+    "type": "chat"
+  },
+  {
+    "day": 11,
+    "slot": "morning",
+    "title": "Coffee tastes better with good conversation ☕",
+    "body": "Check who sent you a morning like in {city}!",
+    "type": "match"
+  },
+  {
+    "day": 11,
+    "slot": "afternoon",
+    "title": "Traffic jam mein bore ho rahe ho? 🚗",
+    "body": "Quick swipe break! 3 new members just verified their photos in {city}.",
+    "type": "match"
+  },
+  {
+    "day": 11,
+    "slot": "night",
+    "title": "Dark mode on, flirt mode ON 🖤",
+    "body": "Late night is when the best chemistry happens. Say something charming!",
+    "type": "chat"
+  },
+  {
+    "day": 12,
+    "slot": "morning",
+    "title": "Your smile caught an eye 👀",
+    "body": "{crush_name} reacted to your profile photo with a heart. See their profile now!",
+    "type": "interest"
+  },
+  {
+    "day": 12,
+    "slot": "afternoon",
+    "title": "Why be single when you're this funny? 😂",
+    "body": "Your prompt answer is getting double-taps. Go reply to your new admirers.",
+    "type": "interest"
+  },
+  {
+    "day": 12,
+    "slot": "night",
+    "title": "Friday night plans sorted? 🥂",
+    "body": "Don't stay home watching reels! Plan a cute dinner with a match in {city}.",
+    "type": "match"
+  },
+  {
+    "day": 13,
+    "slot": "morning",
+    "title": "Saturday morning butterflies 🦋",
+    "body": "Fresh weekend picks are live. Hand-curated singles who love spontaneous plans.",
+    "type": "match"
+  },
+  {
+    "day": 13,
+    "slot": "afternoon",
+    "title": "Your profile heat is at 98%! 🔥",
+    "body": "{views} verified singles checked out your details today. Keep up the charm!",
+    "type": "view"
+  },
+  {
+    "day": 13,
+    "slot": "night",
+    "title": "Are you a night owl or an early bird? 🦉",
+    "body": "Your top match is awake and browsing. Don't be shy, wave hello!",
+    "type": "chat"
+  },
+  {
+    "day": 14,
+    "slot": "morning",
+    "title": "Two weeks in and look at that aura ✨",
+    "body": "Members in {city} are loving your bio. Check out who sent you a wave!",
+    "type": "boost"
+  },
+  {
+    "day": 14,
+    "slot": "afternoon",
+    "title": "Sunday afternoon slacking? 🛋️",
+    "body": "Spend 2 minutes on Knot, find someone to share dessert with tonight.",
+    "type": "match"
+  },
+  {
+    "day": 14,
+    "slot": "night",
+    "title": "Sunday Scaries cure: Cute banter 🧸",
+    "body": "Beat Monday blues with a sweet goodnight conversation. Tap to chat.",
+    "type": "chat"
+  },
+  {
+    "day": 15,
+    "slot": "morning",
+    "title": "Monday Motivation: That one cute match 💼",
+    "body": "Start your week with good vibes. Someone in {city} wants to say hello!",
+    "type": "match"
+  },
+  {
+    "day": 15,
+    "slot": "afternoon",
+    "title": "Post-lunch lull? Spice it up 🌶️",
+    "body": "Someone just answered the same poll as you! See who agreed with your opinion.",
+    "type": "poll"
+  },
+  {
+    "day": 15,
+    "slot": "night",
+    "title": "Unread curiosity waiting for you 💌",
+    "body": "{name}, someone left a thoughtful comment on your travel photos. Open to view!",
+    "type": "interest"
+  },
+  {
+    "day": 16,
+    "slot": "morning",
+    "title": "Wake up, your horoscope said romance 🔮",
+    "body": "Just kidding, but your 96% match in {city} is waiting for a reply!",
+    "type": "match"
+  },
+  {
+    "day": 16,
+    "slot": "afternoon",
+    "title": "Profile Spotlight Active 🌟",
+    "body": "Your profile is getting featured in today's Top Sparks in {city}!",
+    "type": "boost"
+  },
+  {
+    "day": 16,
+    "slot": "night",
+    "title": "Bae or Sleep? Hard choice 😉",
+    "body": "Your chat screen has a spark waiting. Take a quick look before sleeping.",
+    "type": "chat"
+  },
+  {
+    "day": 17,
+    "slot": "morning",
+    "title": "Craving a good breakfast date? 🥞",
+    "body": "Find someone in {city} who takes their coffee as seriously as you do.",
+    "type": "match"
+  },
+  {
+    "day": 17,
+    "slot": "afternoon",
+    "title": "Quick tip: Be a little bold 💬",
+    "body": "A funny opening line gets 88% more responses than 'Hey'. Be memorable, {name}!",
+    "type": "tips"
+  },
+  {
+    "day": 17,
+    "slot": "night",
+    "title": "Look who just showed up in your area 📍",
+    "body": "A member located 3 km away from you just joined Knot. Tap to see!",
+    "type": "match"
+  },
+  {
+    "day": 18,
+    "slot": "morning",
+    "title": "Good morning, heartthrob 💖",
+    "body": "Another day, another chance to meet your favorite person in {city}.",
+    "type": "match"
+  },
+  {
+    "day": 18,
+    "slot": "afternoon",
+    "title": "{views} people paused on your profile today 🛑",
+    "body": "Whatever you did with that bio update, it's definitely working!",
+    "type": "view"
+  },
+  {
+    "day": 18,
+    "slot": "night",
+    "title": "Late night deep talks > small talk 🌌",
+    "body": "Ask them about their childhood dreams or guilty pleasures. Break the ice!",
+    "type": "chat"
+  },
+  {
+    "day": 19,
+    "slot": "morning",
+    "title": "Thursday is the new Friday 🎉",
+    "body": "Start planning your weekend date today. 4 fresh matches are waiting!",
+    "type": "match"
+  },
+  {
+    "day": 19,
+    "slot": "afternoon",
+    "title": "Someone has a crush on your music taste 🎵",
+    "body": "{crush_name} loved your Spotify picks. Send a voice message!",
+    "type": "interest"
+  },
+  {
+    "day": 19,
+    "slot": "night",
+    "title": "Don't leave them hanging... ⏳",
+    "body": "Unanswered matches go cold after 24 hours. Send a quick wave to keep the flame!",
+    "type": "chat"
+  },
+  {
+    "day": 20,
+    "slot": "morning",
+    "title": "It's Friday! Who's taking you out? 🍸",
+    "body": "Get your date sorted before 5 PM. Check out who is free tonight in {city}.",
+    "type": "match"
+  },
+  {
+    "day": 20,
+    "slot": "afternoon",
+    "title": "Weekend mood: Date ready 💅",
+    "body": "{views} new profile views in the last 4 hours. You're hot property today!",
+    "type": "view"
+  },
+  {
+    "day": 20,
+    "slot": "night",
+    "title": "Friday night magic in the air ✨",
+    "body": "Don't sit back. Your favorite match in {city} is browsing right now!",
+    "type": "chat"
+  },
+  {
+    "day": 21,
+    "slot": "morning",
+    "title": "Halfway through 40 days of sparks! 🎈",
+    "body": "Celebrate with a brand new batch of high-vibe singles hand-picked for you.",
+    "type": "match"
+  },
+  {
+    "day": 21,
+    "slot": "afternoon",
+    "title": "Road trip or Cozy cafe? 🛣️",
+    "body": "Vote in the weekend poll and discover matches with identical wanderlust.",
+    "type": "poll"
+  },
+  {
+    "day": 21,
+    "slot": "night",
+    "title": "Saturday night confessions 🤫",
+    "body": "Tell them your favorite midnight snack. Best conversations start with food!",
+    "type": "chat"
+  },
+  {
+    "day": 22,
+    "slot": "morning",
+    "title": "Sunday lazy morning vibe ☕",
+    "body": "Grab a cup and spend 3 minutes reviewing your newest admirers in {city}.",
+    "type": "match"
+  },
+  {
+    "day": 22,
+    "slot": "afternoon",
+    "title": "Photo Check 📸",
+    "body": "A smiling candid photo increases date invites by 65%. Time to refresh your 2nd photo?",
+    "type": "tips"
+  },
+  {
+    "day": 22,
+    "slot": "night",
+    "title": "Sunday night winding down 🕯️",
+    "body": "{name}, someone who matches your exact dating goals is waiting in your inbox.",
+    "type": "chat"
+  },
+  {
+    "day": 23,
+    "slot": "morning",
+    "title": "Monday smiles hit different when you have a crush 🌸",
+    "body": "Check your fresh matches in {city} for the week ahead!",
+    "type": "match"
+  },
+  {
+    "day": 23,
+    "slot": "afternoon",
+    "title": "Someone just revisited your profile 👀",
+    "body": "That's their 2nd visit this week. They're clearly interested, {name}!",
+    "type": "view"
+  },
+  {
+    "day": 23,
+    "slot": "night",
+    "title": "Late night tea: Someone’s waiting 🍵",
+    "body": "You received a new wave in {city}. Don't keep them waiting till tomorrow!",
+    "type": "interest"
+  },
+  {
+    "day": 24,
+    "slot": "morning",
+    "title": "Are you a morning person yet? ☀️",
+    "body": "Even if you aren't, this cute match in your feed will wake you up fast!",
+    "type": "match"
+  },
+  {
+    "day": 24,
+    "slot": "afternoon",
+    "title": "Office gossip boring? 🥱",
+    "body": "Hop onto Knot for a quick chat with someone who actually matches your intellect.",
+    "type": "chat"
+  },
+  {
+    "day": 24,
+    "slot": "night",
+    "title": "Stars are aligning in {city} ✨",
+    "body": "We found a match with 97% compatibility on your core relationship values.",
+    "type": "match"
+  },
+  {
+    "day": 25,
+    "slot": "morning",
+    "title": "Good morning! Time for some flirtation 😉",
+    "body": "Your daily sparks have arrived. Tap to see today's top picks in {city}.",
+    "type": "match"
+  },
+  {
+    "day": 25,
+    "slot": "afternoon",
+    "title": "Profile alert: {views} new views today 🔥",
+    "body": "People in {city} are definitely noticing your aesthetic. Go say hello!",
+    "type": "view"
+  },
+  {
+    "day": 25,
+    "slot": "night",
+    "title": "Midnight question: Favorite pizza topping? 🍕",
+    "body": "Pineapple or classic pepperoni? Ask your match and start the playful debate!",
+    "type": "chat"
+  },
+  {
+    "day": 26,
+    "slot": "morning",
+    "title": "Someone in {city} checked your profile at 2 AM 🌙",
+    "body": "Curious who it was? Open Knot to uncover your late-night admirer.",
+    "type": "view"
+  },
+  {
+    "day": 26,
+    "slot": "afternoon",
+    "title": "Work break nudge 🍩",
+    "body": "Take 60 seconds to answer today's Knot Spark Prompt. It boosts profile views by 2x!",
+    "type": "tips"
+  },
+  {
+    "day": 26,
+    "slot": "night",
+    "title": "Cozy blanket & cute texts? 🛋️",
+    "body": "Why scroll endless reels when you could be falling for someone special?",
+    "type": "chat"
+  },
+  {
+    "day": 27,
+    "slot": "morning",
+    "title": "Almost Friday energy ⚡",
+    "body": "Line up that weekend date now! Verified singles in {city} are active.",
+    "type": "match"
+  },
+  {
+    "day": 27,
+    "slot": "afternoon",
+    "title": "Someone just double-tapped your prompt ❤️",
+    "body": "They loved your quirky response. Send them a playful follow-up!",
+    "type": "interest"
+  },
+  {
+    "day": 27,
+    "slot": "night",
+    "title": "Your inbox has a spark waiting 💌",
+    "body": "Don't let the conversation sleep. Reply to {crush_name} and see where it goes!",
+    "type": "chat"
+  },
+  {
+    "day": 28,
+    "slot": "morning",
+    "title": "TGIF, {name}! 🥂",
+    "body": "Ready for the weekend? Find someone who knows the best cocktail bars in {city}.",
+    "type": "match"
+  },
+  {
+    "day": 28,
+    "slot": "afternoon",
+    "title": "Your profile is on fire this Friday 🔥",
+    "body": "Top 3% viewed in {city} today! Members are waiting for your response.",
+    "type": "boost"
+  },
+  {
+    "day": 28,
+    "slot": "night",
+    "title": "Friday night: Don't stay on read 📵",
+    "body": "A sweet goodnight text could turn into breakfast plans tomorrow. Go for it!",
+    "type": "chat"
+  },
+  {
+    "day": 29,
+    "slot": "morning",
+    "title": "Weekend adventure loading... 🏕️",
+    "body": "Check out who in {city} wants to go hiking or cafe hopping today.",
+    "type": "match"
+  },
+  {
+    "day": 29,
+    "slot": "afternoon",
+    "title": "Spotted: A 95% match nearby 📍",
+    "body": "Someone sharing your exact music and film vibe is within 5 km of you.",
+    "type": "match"
+  },
+  {
+    "day": 29,
+    "slot": "night",
+    "title": "Saturday night romance 💫",
+    "body": "Skip the small talk: 'Tell me your most unpopular opinion'. Watch the magic happen!",
+    "type": "chat"
+  },
+  {
+    "day": 30,
+    "slot": "morning",
+    "title": "One full month of sparks! 🎂",
+    "body": "You've had {views} profile views this month. Your soulmate is definitely in the crowd.",
+    "type": "boost"
+  },
+  {
+    "day": 30,
+    "slot": "afternoon",
+    "title": "Sunday afternoon date inspo ☕",
+    "body": "Best first dates are low pressure: iced latte & a 20-minute walk. Try it!",
+    "type": "tips"
+  },
+  {
+    "day": 30,
+    "slot": "night",
+    "title": "Sunday night check-in 🌙",
+    "body": "End your weekend with a conversation that gives you butterflies. Open Knot!",
+    "type": "chat"
+  },
+  {
+    "day": 31,
+    "slot": "morning",
+    "title": "New month, new romantic chapter ✨",
+    "body": "Fresh faces in {city} have joined Knot today. Be the first to greet them!",
+    "type": "match"
+  },
+  {
+    "day": 31,
+    "slot": "afternoon",
+    "title": "Did you get a haircut? 💇",
+    "body": "Because your profile is getting extra attention today! {views} visits recorded.",
+    "type": "view"
+  },
+  {
+    "day": 31,
+    "slot": "night",
+    "title": "Sweet dreams or late night chats? 😴",
+    "body": "A verified member in {city} just sent you a wave. Tap to wave back!",
+    "type": "interest"
+  },
+  {
+    "day": 32,
+    "slot": "morning",
+    "title": "Good morning, handsome/gorgeous! ☀️",
+    "body": "Today's daily selection is tailored to your exact height & lifestyle filters.",
+    "type": "match"
+  },
+  {
+    "day": 32,
+    "slot": "afternoon",
+    "title": "Split the bill or take turns? 💳",
+    "body": "Cast your vote in today’s spicy poll and see how modern singles in {city} date.",
+    "type": "poll"
+  },
+  {
+    "day": 32,
+    "slot": "night",
+    "title": "10 PM: Someone is thinking of texting you 💭",
+    "body": "Don't make them wait. Send a cheeky GIF or prompt reply right now!",
+    "type": "chat"
+  },
+  {
+    "day": 33,
+    "slot": "morning",
+    "title": "Fresh daily picks in {city} 🍓",
+    "body": "Someone with a killer sense of humor just matched your vibe. Check them out!",
+    "type": "match"
+  },
+  {
+    "day": 33,
+    "slot": "afternoon",
+    "title": "Sparks flying in your area ⚡",
+    "body": "Activity in {city} is up 40% this afternoon. Perfect time to connect!",
+    "type": "boost"
+  },
+  {
+    "day": 33,
+    "slot": "night",
+    "title": "Late night music recommendations? 🎶",
+    "body": "Share your favorite late-night song with your top match. Instant bonding!",
+    "type": "chat"
+  },
+  {
+    "day": 34,
+    "slot": "morning",
+    "title": "Wake up with intention 💫",
+    "body": "Ready to meet someone real? 3 high-intent singles in {city} are waiting for you.",
+    "type": "match"
+  },
+  {
+    "day": 34,
+    "slot": "afternoon",
+    "title": "Profile Heatwave Alert 🌡️",
+    "body": "You received {views} new profile views since noon. Don't be shy, check who!",
+    "type": "view"
+  },
+  {
+    "day": 34,
+    "slot": "night",
+    "title": "Dinner plans or late night drive? 🚗",
+    "body": "Find someone in {city} who never says no to midnight ice cream runs.",
+    "type": "match"
+  },
+  {
+    "day": 35,
+    "slot": "morning",
+    "title": "Friday anticipation is real 🥂",
+    "body": "Plan an exciting first date for this weekend. Tap to view your best matches.",
+    "type": "match"
+  },
+  {
+    "day": 35,
+    "slot": "afternoon",
+    "title": "Someone just complimented your vibe 🌸",
+    "body": "{crush_name} reacted to your prompt. Go read what they said!",
+    "type": "interest"
+  },
+  {
+    "day": 35,
+    "slot": "night",
+    "title": "Friday night lights in {city} 🌃",
+    "body": "Don't let Friday slip by without a spark. Drop a message to your top match!",
+    "type": "chat"
+  },
+  {
+    "day": 36,
+    "slot": "morning",
+    "title": "Saturday morning glow ✨",
+    "body": "Weekend matches are here. Elite singles in {city} looking for real connections.",
+    "type": "match"
+  },
+  {
+    "day": 36,
+    "slot": "afternoon",
+    "title": "Are you a good listener? 👂",
+    "body": "Ask them about their passion project. Deep conversations lead to real dates!",
+    "type": "tips"
+  },
+  {
+    "day": 36,
+    "slot": "night",
+    "title": "Saturday night banter 🍷",
+    "body": "Someone charming is online right now in {city}. Take a chance, send a message!",
+    "type": "chat"
+  },
+  {
+    "day": 37,
+    "slot": "morning",
+    "title": "Sunday brunch vibes 🥞",
+    "body": "Find someone to laugh with over mimosas and coffee today in {city}.",
+    "type": "match"
+  },
+  {
+    "day": 37,
+    "slot": "afternoon",
+    "title": "{views} singles checked out your photos today 📸",
+    "body": "Your aesthetic is turning heads! Send a hello to your new visitors.",
+    "type": "view"
+  },
+  {
+    "day": 37,
+    "slot": "night",
+    "title": "Sunday wind-down 🕯️",
+    "body": "Chatting with the right person makes Monday morning 100x easier. Say hello!",
+    "type": "chat"
+  },
+  {
+    "day": 38,
+    "slot": "morning",
+    "title": "Start your Monday with a smile 😊",
+    "body": "A verified single in {city} with 95% compatibility just joined your feed.",
+    "type": "match"
+  },
+  {
+    "day": 38,
+    "slot": "afternoon",
+    "title": "Quick check-in, {name} ⏳",
+    "body": "Your match sent a reaction 3 hours ago. Keep the momentum going!",
+    "type": "chat"
+  },
+  {
+    "day": 38,
+    "slot": "night",
+    "title": "Who's your favorite late-night notification? 📲",
+    "body": "Make it someone special on Knot. Open up and reply to that unread message.",
+    "type": "chat"
+  },
+  {
+    "day": 39,
+    "slot": "morning",
+    "title": "Almost 40 days of sparks! 🔥",
+    "body": "You've built up great dating karma. Today's daily picks are extra special.",
+    "type": "boost"
+  },
+  {
+    "day": 39,
+    "slot": "afternoon",
+    "title": "First date green flag? 🚩",
+    "body": "Vote in the community poll and see what singles in {city} prioritize most.",
+    "type": "poll"
+  },
+  {
+    "day": 39,
+    "slot": "night",
+    "title": "Tomorrow is Day 40, but tonight is yours 🌟",
+    "body": "{crush_name} is online right now. Don't let tonight pass without saying hi!",
+    "type": "chat"
+  },
+  {
+    "day": 40,
+    "slot": "morning",
+    "title": "Day 40: The Knot VIP Milestone 👑",
+    "body": "You're a legendary member, {name}! Your profile is getting priority spotlight today.",
+    "type": "boost"
+  },
+  {
+    "day": 40,
+    "slot": "afternoon",
+    "title": "Your secret admirer is waiting... 💌",
+    "body": "A member in {city} who visited your profile 4 times is waiting for you to make a move.",
+    "type": "interest"
+  },
+  {
+    "day": 40,
+    "slot": "night",
+    "title": "The spark never ends on Knot ✨",
+    "body": "40 days in, and the best connection is still waiting to be made. Check your fresh matches!",
+    "type": "match"
+  }
+]

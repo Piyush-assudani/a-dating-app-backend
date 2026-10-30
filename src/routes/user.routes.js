@@ -1,0 +1,89 @@
+const express = require('express');
+const router = express.Router();
+const userController = require('../controllers/user.controller');
+const auth = require('../middleware/auth.middleware');
+const { createDedupeMiddleware } = require('../middleware/dedupe.middleware');
+
+// Dedupe middleware for profile reads (prevents duplicate simultaneous requests)
+const profileDedupe = createDedupeMiddleware(
+  (req) => req.user ? `profile:${req.params.id || req.user.phone}:${req.path}` : null,
+  3000
+);
+
+const searchDedupe = createDedupeMiddleware(
+  (req) => req.user ? `search:${req.user.phone}:${JSON.stringify(req.query)}` : null,
+  2000
+);
+
+router.post('/profile', auth, userController.createProfile);
+router.get('/profile/me', auth, userController.getMyProfile);
+router.get('/profile/:id', auth, profileDedupe, userController.getProfileById);
+router.get('/profiles', auth, searchDedupe, userController.getProfiles);
+
+// Astrology Insight
+router.post('/astrology-insight', auth, userController.getAstrologyInsight);
+
+// Double Opt-In Interest Routes
+router.post('/interest', auth, userController.sendInterest);
+router.get('/interests', auth, userController.getInterests);
+router.get('/activity', auth, userController.getActivity);
+router.post('/track-activity', auth, userController.trackActivity);
+router.post('/interest/accept', auth, userController.acceptInterest);
+router.post('/interest/reject', auth, userController.rejectInterest);
+router.post('/interest/cancel', auth, userController.cancelInterest);
+
+// Contextual AI Icebreakers Route
+router.get('/chat/icebreakers/:targetPhone', auth, userController.getIcebreakers);
+
+// --- MODERATION ---
+router.post('/block', auth, userController.blockUser);
+router.post('/unblock', auth, userController.unblockUser);
+router.get('/blocked', auth, userController.getBlockedUsers);
+router.post('/report', auth, userController.reportUser);
+router.get('/reports', auth, userController.getReports);
+router.get('/blocks', auth, userController.getBlocks);
+
+// Admin Portal Routes
+router.post('/admin/create-developer', auth, userController.createDeveloperAccount);
+router.get('/admin/users', auth, userController.getAllUsersAdmin);
+
+// Password Management
+router.post('/password', auth, userController.changePassword);
+
+// FCM Token Management
+router.post('/fcm-token', auth, userController.updateFcmToken);
+
+// Account Deletion
+router.delete('/account', auth, userController.deleteAccount);
+
+// Preferences & Hobbies
+router.put('/partner-preferences', auth, userController.updatePartnerPreferences);
+router.put('/hobbies', auth, userController.updateHobbies);
+
+// In-App Chat Routes
+router.get('/chats', auth, userController.getConversations);
+router.get('/chat/:targetUserId', auth, userController.getChatMessages);
+router.post('/chat/send', auth, userController.sendChatMessage);
+
+// Admin Control Panel Routes
+router.post('/admin/push', auth, userController.adminBroadcastPush);
+router.put('/admin/user/:userId', auth, userController.adminEditUser);
+router.delete('/admin/user/:userId', auth, userController.adminDeleteUser);
+router.put('/admin/change-password', auth, userController.adminChangePassword);
+router.post('/admin/change-password', auth, userController.adminChangePassword);
+router.get('/admin/phone-logs', auth, userController.getPhoneLogs);
+
+// App Version & Update Management
+router.get('/app-config', userController.getAppConfig);              // Public: client checks for updates
+router.put('/admin/app-config', auth, userController.updateAppConfig); // Admin: set version rules
+router.post('/admin/app-config', auth, userController.updateAppConfig); // Admin POST alias
+
+// Onboarding Progress
+router.post('/onboarding-progress', auth, userController.updateOnboardingProgress);
+router.get('/admin/onboarding-progress', auth, userController.getOnboardingProgress);
+
+// WhatsApp Unlock
+router.post('/whatsapp/request', auth, userController.requestWhatsappUnlock);
+router.post('/whatsapp/approve', auth, userController.approveWhatsappUnlock);
+
+module.exports = router;
